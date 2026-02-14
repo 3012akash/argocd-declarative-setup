@@ -6,13 +6,14 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/3012akash/application-manifests.git'
-    targetRevision: HEAD
-    path: '.'
+    repoURL: https://github.com/3012akash/argocd-declarative-setup.git
+    targetRevision: main
+    path: app
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+
